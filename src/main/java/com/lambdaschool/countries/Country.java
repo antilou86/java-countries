@@ -26,25 +26,10 @@ public class Country {
         return population;
     }
 
-    public void setPopulation(int population) {
-        this.population = population;
-    }
-
-    public int getLandMass() {
-        return landMass;
-    }
-
-    public void setLandMass(int landMass) {
-        this.landMass = landMass;
-    }
-
     public int getMedianAge() {
         return medianAge;
     }
 
-    public void setMedianAge(int medianAge) {
-        this.medianAge = medianAge;
-    }
 
     @Override
     public String toString() {
