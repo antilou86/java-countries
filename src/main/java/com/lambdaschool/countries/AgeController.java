@@ -32,7 +32,8 @@ public class AgeController {
     public ResponseEntity<?> getMaxAge() {
         ArrayList<Country> sortedAge = CountriesApplication.myCountryList.countryList;
         sortedAge.sort(Comparator.comparingInt(Country::getMedianAge));
-        return new ResponseEntity<>(sortedAge.get(sortedAge.size()),HttpStatus.OK);
+        int size = sortedAge.size()-1;
+        return new ResponseEntity<>(sortedAge.get(size),HttpStatus.OK);
     }
     //localhost:8080/age/median ---stretch
 }

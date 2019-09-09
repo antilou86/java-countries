@@ -35,7 +35,8 @@ public class PopulationController {
     public ResponseEntity<?> getMaxPop() {
         ArrayList<Country> sortedPop = CountriesApplication.myCountryList.countryList;
         sortedPop.sort(Comparator.comparingInt(Country::getPopulation));
-        return new ResponseEntity<>(sortedPop.get(sortedPop.size()),HttpStatus.OK);
+        int size = sortedPop.size()-1;
+        return new ResponseEntity<>(sortedPop.get(size),HttpStatus.OK);
     }
     //localhost:8080/population/median ---stretch
 
